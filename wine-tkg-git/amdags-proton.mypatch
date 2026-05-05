@@ -1302,17 +1302,17 @@ index 089a87b863b..1e1b06a61dc 100755
  enable_advapi32
  enable_advpack
 +enable_amd_ags_x64
+ enable_aero_msstyles
  enable_amsi
  enable_amstream
- enable_api_ms_win_appmodel_identity_l1_1_0
 @@ -19271,6 +19272,7 @@ wine_fn_config_makefile dlls/advapi32 enable_advapi32
  wine_fn_config_makefile dlls/advapi32/tests enable_tests
  wine_fn_config_makefile dlls/advpack enable_advpack
  wine_fn_config_makefile dlls/advpack/tests enable_tests
 +wine_fn_config_makefile dlls/amd_ags_x64 enable_amd_ags_x64
+ wine_fn_config_makefile dlls/aero.msstyles enable_aero_msstyles
  wine_fn_config_makefile dlls/amsi enable_amsi
  wine_fn_config_makefile dlls/amstream enable_amstream
- wine_fn_config_makefile dlls/amstream/tests enable_tests
 diff --git a/configure.ac b/configure.ac
 index 224bc2e7030..49c37fabe0c 100644
 --- a/configure.ac
@@ -1322,9 +1322,9 @@ index 224bc2e7030..49c37fabe0c 100644
  WINE_CONFIG_MAKEFILE(dlls/advpack)
  WINE_CONFIG_MAKEFILE(dlls/advpack/tests)
 +WINE_CONFIG_MAKEFILE(dlls/amd_ags_x64)
+ WINE_CONFIG_MAKEFILE(dlls/aero.msstyles)
  WINE_CONFIG_MAKEFILE(dlls/amsi)
  WINE_CONFIG_MAKEFILE(dlls/amstream)
- WINE_CONFIG_MAKEFILE(dlls/amstream/tests)
 diff --git a/dlls/amd_ags_x64/Makefile.in b/dlls/amd_ags_x64/Makefile.in
 new file mode 100644
 index 00000000000..7545260d1de
